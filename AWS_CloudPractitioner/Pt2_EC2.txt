@@ -1,0 +1,58 @@
+AWS Global Infrastructure Overview
+- AWS Regions: is a geographical cluster of data centers. Has at least 2 AZ, can has up to 6 AZ
+- Availability Zones (AZ): Separated couple km away for redundancy, each AZ has 1-3 data centers
+  - Housed in separate facilities with redundant power and reduntant parallel fiber network
+  - Provde Amazon CloudFront that uses Global Content Delivery Network (CDN)
+  - Helps with partitioning to pretect from natural disasters
+
+EC2 (Elastic Compute Cloud) Overview
+- Enables scale up, handle changes or spickes
+- Hosted in multiple region, SLA 99/99% availability for each Amazon EC2 region
+
+EC2 Basics
+- Instances: virtual server, used to control the amount of CPU, Memory, GPU, storage, and network capacity needed
+- Differenct instances option
+  - General purpose: CPU, memory, and network balances. Ex: Web server
+  - Compute optimized: CPU utilization. Ex: Game
+  - Memory optimized: used to keep large memory data sets. Ex: big data
+  - Storage optimized: sequential read & write access. Ex: Data warehouse
+  - Accelerated computing: Hardware accelerators where GPU is prioritized. Ex: Machine/Deep learning
+  - HPC optimized: uses High-performance processors to fit different use cases. Ex: Complex simluation
+- AMI (Amazon Machine Image): template that allows cutom configurations to create virtual servers EC2
+
+AWS Global Infrastructure Benefit
+- Better performance, availabilty and reliability
+- Security that satisfy the requirements for military and global banks
+- Scalability based on actually business need
+- Lower cost of ownership nad overall price of IT Infrastructure
+
+Amazon EBS (Elastic Block Store)
+- Is the location where EC2 instances are kept, each EBS are a single block level storage volumes
+- One EBS can only mount to one instance at a time, multiple EBS can attach to one instance
+- The latency between EBS volume and EC2 instance is milisecond digit which is very 
+- Used for high throughput and intensive workloads
+- Dsta persist in the EBS volume even when EC2 instance is deleted
+- Two type storage used are: 
+  - SSD (Solid-State Drive) backed storage - for frequent R/W with small I/O
+  - HDD (Hard Disk Drive) backed storage - throughput intensive workload as mapReduce, Data warehouse, log processing
+- 
+
+DNS - query ip address from the hostname requested by user or PC.
+
+AWS Support Overview
+- Basic - free and automatic, for personal and developer
+- Paid option - all the resources, including unlimited tech support
+
+VPC (Virtual Private Cloud) - dedicated virtual network in AWS accound, the VPC must match the subnets in the AZ
+
+AWS System Manager Overview helps manage AWS resources securely. It provide functions as,
+- Operations Management - done from central location for issue recsolving and investigation
+- Change Managemnet - systems manager document that automate common tasks
+- Application Management - to manage the application and service metadata
+- Node Management - AWS Systems Manager Fleet Management used to streamlines management
+
+AWS System manager use cases:
+- Centralized operations by aggregating data to viewable console
+- Implement best proactive and reactive processes
+- Remediate Security Issues - enhance security and the Compliance
+- Auto-resolve Issues - managge application and issues easily
