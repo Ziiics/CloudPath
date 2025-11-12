@@ -1,0 +1,24 @@
+DynamoDB Table Terms
+- DynamoDB consist of items (defined by primary key as its unique identifier) that consist of attributes (defined as partition key)
+- Primary Key unique Identifier are,
+  - The partition key: mandatory as it is used to hash function to call the partition
+  - Sort Key: optional, provides flexibility
+- To use DynamoDB, create a table and add data based on the table requirements
+- Search data can be done by query where it will scan the whole database
+- To delete an item, specify its primary key
+- Batch operation is also possible
+
+Amazon DynamoDB overview
+- DynamoDB Accelerator (DAX) is useful to make data even faster
+- Has 2 different R/W capacity modes,
+  - Provisioned: a set capacity
+  - On-demand: when workloads less predictable, paying only what you use
+- Can use trigger with AWS Lambda function for any update or data modifications
+- Point-in-time-recovery (PITR) - protect from accidental write or delete operation, continuous backup and recover any time up to the second up to 35 days with no downtime
+
+Amazon DynamoDB queries
+- Find item from table or secondary index with the primary key values or sort key using query operation
+- Can you filter expression or conditional expression as place holder
+
+Question
+- AWS CLI for query
