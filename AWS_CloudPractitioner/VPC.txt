@@ -28,3 +28,13 @@ Enabling VPC Internet Connection
 - Add NAT gateway to the route to direct traffic form internet to NAT gateway (doesn't support IPv6)
 - For IPv6, use Egress-only Internet gateway, allow traffic to go out but prevent inbound traffic
   - Make sure to add it to the route table for IPv6 to go to Egress-only
+
+VPC Peering Connections
+- To route traffic between VPC using either private IPv4 or IPv6 address
+- Can connect between VPC in the same or different account and regions
+- Not a gateway nor VPN, use the existing VPC infrastructure, reducing single point of failure and bandwidth bottleneck
+- Thw way it works
+  - VPC Requester send the peering request to VPC accepter
+    - peering will be unsupported if there are overlapping CIDR between teh two
+  - VPC Accepter will then accpet the peering request if it fit the requrement
+  - VPC will user the peering id as target when adding the other VPC to its connection
